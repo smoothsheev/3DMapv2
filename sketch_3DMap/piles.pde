@@ -14,8 +14,9 @@ class Piles extends GameObject{
   }
   
   void act() {
-  if (mouseX <= loc.x - (gridSize/2) && mouseX >= loc.x + (gridSize/2) && mouseY <= loc.y - (gridSize/2) && mouseY >= loc.y + (gridSize/2)) {
-    
+  if (eyex <= loc.x - (gridSize/2) && eyex >= loc.x + (gridSize/2) && eyez <= loc.z - (gridSize/2) && eyez >= loc.z + (gridSize/2)) {
+   lives = 0;
+   ammo++;
   }
   }
   

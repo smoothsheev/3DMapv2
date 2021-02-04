@@ -19,9 +19,10 @@ void move() {
     eyez -= sin(leftRightAngle)*10;
   }
   shotTimer++;
-  if (spacekey && ammo >= 1 && shotTimer > threshold) {
+  if (spacekey && ammo >= 1 && shotTimer > threshold && ammo > 0) {
     objects.add(new Bullet());
     shotTimer = 0;
+    ammo--;
   }
 
   focusx = eyex + cos(leftRightAngle)*300;
